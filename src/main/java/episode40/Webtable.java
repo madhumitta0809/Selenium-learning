@@ -17,6 +17,7 @@ public class Webtable {
 		ChromeDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.get("https://letcode.in/table");
+	
 		
 		WebElement table=driver.findElementById("simpletable");
 		
@@ -74,7 +75,7 @@ public class Webtable {
 		
 		System.out.println(k);
 		
-		WebElement total= table1.findElement(By.cssSelector("tfoot b"));
+		WebElement total= table1.findElement(By.cssSelector("tfoot b "));
 		String p=total.getText();
 		int b=Integer.parseInt(p);
 		if(b==k)
